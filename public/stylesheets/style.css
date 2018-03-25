@@ -1,35 +1,26 @@
 body {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
-  padding: 15px;
+  grid-template-rows: auto 1fr auto ;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
-  height: 100vh;
-}
-
-a {
-  color: #00B7FF;
+    height: 100vh;
 }
 
 .content {
   grid-row: 2 / 3;
   grid-column: 2 / -1;
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  background-color: #eee;
-  border-radius: 8px;
-  border: 1px solid black;
+  grid-template-columns: auto 1fr;
   z-index: 1;
+  margin:0;
 }
 
 .block-content {
   grid-column: 2/-1;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 .sidebar {
-  background-color: #aaa;
   grid-column: 1/2;
   align-self: stretch;
   justify-self: stretch;
@@ -42,38 +33,54 @@ a {
   margin-top: 0;
   display: grid;
   grid-auto-flow: row;
-  justify-items: stretch;
   grid-gap: 5px;
 }
 
 .header {
   grid-column: 1/-1;
+  border-bottom: 1px solid grey;
 }
 
-.logo {
-  max-width: 400px;
-  padding: 15px;
+#logo {
+  max-width: 300px;
+  height: auto;
+  padding: 10px;
 }
 
 .item {
-  background-color: #666;
-  color: white;
-  list-style-type: none;
-  border: 2px solid grey;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 1.5em;
+  text-align: left;
+  list-style: none;
+  padding: 5px 10px;
 }
 
-.item:hover {
-  background-color: #444;
+.item a {
+    color: #444;
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: #BBB;
 }
 
 .buttons {
-  grid-row-start: 3;
-  grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    display: grid;
+    grid-auto-flow: column;
+
 }
 .btn {
-  margin: 15px;
-  border-radius: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 8px;
+    color: white;
+
+}
+
+#btn-preview {
+    background-color: blue;
+}
+
+#btn-save {
+    background-color: red;
 }

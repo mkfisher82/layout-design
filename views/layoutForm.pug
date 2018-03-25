@@ -1,23 +1,35 @@
 html
   head
     title= title
-    //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
-    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     div(class="header")
-      img(src="/images/logo-459x100.png" class="logo")
+      img(src="/images/logo-459x100.png" id="logo")
       
     div(class="content")
       div(class="sidebar")
         ul(class="list")
-          -for (var i=1; i <= 10; i++)
-            li(class="item")= "Menu Item " + i
+          li(class="item")
+              a(href="/user_details") User Details
+          li(class="item")
+              a(href="/business_details") Business Details
+          li(class="item")
+              a(href="/who-we-are") Who We Are
+          li(class="item")
+              a(href="/what-we-do") What We Do
+          li(class="item")
+              a(href="/where-we-service") Where We Service
+          li(class="item")
+              a(href="/Why Use Us") Why Use Us
+          li(class="item")
+              a(href="/Certifications") Certifications
+          li(class="item")
+              a(href="/Design") Design
       div(class="block-content")
         block content
     
     div(class="buttons")
-      a(class="btn btn-primary") Preview
-      a(class="btn btn-danger") Save & Continue
+      a(class="btn" id="btn-preview") Preview
+      a(class="btn" id="btn-save") Save & Continue
 
     
